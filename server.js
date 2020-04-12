@@ -12,7 +12,7 @@ const server=http.createServer(app);
 
 const io=socketio(server);
 
-const server_port=process.env.PORT || 3000;
+const server_ports=process.env.PORT || 3000;
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
@@ -64,7 +64,7 @@ console.log(userSockets);
 })
 
 
-server.listen(server_port);
+server.listen(server_ports);
 
 
 
